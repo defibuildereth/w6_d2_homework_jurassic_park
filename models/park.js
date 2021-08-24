@@ -25,4 +25,14 @@ Park.prototype.findMostVisitors = function () {
     return topDino;
 }
 
+Park.prototype.findAllOfSpecies = function (species) {
+    let allOfSpecies = []
+    for (dinosaur of this.dinosaurs) {
+        if (dinosaur.species === species) {
+            allOfSpecies.push(dinosaur)
+        }
+    }
+    return allOfSpecies
+}
+
 module.exports = Park;
