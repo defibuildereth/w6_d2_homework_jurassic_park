@@ -43,4 +43,10 @@ Park.prototype.findTotalDailyVisitors = function () {
     return totalDailyVisitors
 }
 
+Park.prototype.findTotalAnnualVisitors = function () {
+    let totalDailyVisitors = this.findTotalDailyVisitors();
+    let totalAnnualVisitors = totalDailyVisitors * 365
+    return totalAnnualVisitors;
+}
+
 module.exports = Park;
