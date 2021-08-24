@@ -49,4 +49,11 @@ Park.prototype.findTotalAnnualVisitors = function () {
     return totalAnnualVisitors;
 }
 
+Park.prototype.findTotalAnnualRevenue = function () {
+    let totalAnnualVisitors = this.findTotalAnnualVisitors();
+    let ticketPrice = this.ticketPrice;
+    let totalAnnualRevenue = totalAnnualVisitors * ticketPrice;
+    return totalAnnualRevenue;
+}
+
 module.exports = Park;
